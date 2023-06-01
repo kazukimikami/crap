@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "@types/node": "^18",
-    "nuxt": "^3.5.2"
+    "bulma": "^0.9.4",
+    "nuxt": "^3.5.2",
+    "sass": "^1.62.1"
   }
 }
