@@ -1,8 +1,8 @@
 <template>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-black" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <a class="navbar-item" href="/">
+              <i>💩</i>Crap
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -20,7 +20,7 @@
                 </a>
 
                 <div class="navbar-dropdown">
-                  <a class="navbar-item">
+                  <a class="navbar-item" href="/about">
                     About
                   </a>
                   <a class="navbar-item">
@@ -43,9 +43,7 @@
         <footer class="footer">
           <div class="content has-text-centered">
             <p>
-              <strong>Crap</strong> by Kazuki Mikami. The source code is licensed
-              <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-              is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+              <strong>Crap</strong> by Kazuki Mikami.
             </p>
           </div>
         </footer>
