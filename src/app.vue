@@ -20,19 +20,18 @@
 </template>
 
 <script setup lang="ts">
-const taskName = ref<string>('')
+const taskName = ref<string>('');
 const taskNames = ref<string[]>([]);
-const addTask = () => {
-  if (taskName.value === '') {
-    return;
-  }
+const addTask = (): void => {
+  if (taskName.value === '') return;
+
   taskNames.value.push(taskName.value);
   taskName.value = '';
 }
-const completeTask = (completedTaskName: string) => {
-  taskNames.value = taskNames.value.filter((taskName: string) => {
-    return completedTaskName !== taskName
-  });
+const completeTask = (completedTaskName: string): void => {
+  taskNames.value = taskNames.value.filter((taskName: string): boolean => {
+    return completedTaskName !== taskName;
+  })
 }
 </script>
 
