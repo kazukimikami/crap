@@ -20,13 +20,9 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/about">About</a>
-                        <a class="navbar-item">
-                            Jobs
-                        </a>
-                        <a class="navbar-item">
-                            Contact
-                        </a>
+                        <a class="navbar-item" href="/tellmeramu">教えてラムちゃん</a>
+                        <a class="navbar-item" href="/todo">Todo</a>
+                        <a class="navbar-item">---</a>
                     </div>
                 </div>
             </div>
