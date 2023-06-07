@@ -20,7 +20,7 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/tellmeramu">教えてラムちゃん</a>
+                        <a class="navbar-item" href="/withramu">おしゃべりラムちゃん</a>
                         <a class="navbar-item" href="/todo">Todo</a>
                         <a class="navbar-item">---</a>
                     </div>
