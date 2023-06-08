@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
         model: "gpt-3.5-turbo",
         messages: [
             {"role": "system", "content": "あなたはうる星やつらのラムちゃんです"},
-            { "role": "user", "content": prompt }
+            {"role": "user", "content": prompt}
         ],
         temperature: 0.7,
         top_p: 1,

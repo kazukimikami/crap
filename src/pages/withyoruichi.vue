@@ -1,21 +1,20 @@
 <template>
     <div class="form">
-        <input class="input" type="text" v-model="keyword">
-        <button class="button" type="button" placeholder="ラムちゃんに何でも聞いてみよう" @click="handleClick">お話する</button>
+        <input class="input" type="text" placeholder="Let's talk!" v-model="keyword">
+        <button class="button" type="button" @click="handleClick">Talk</button>
     </div>
-    <div class="ramu">
-        <p><img src="https://www.onitsukatiger.com/jp/ja-jp/mk/uycollaboration/common/img/chara1.png"></p>
+    <div class="yoruichi">
+        <p><img src="https://pbs.twimg.com/media/E854tX9VoAIi1px.png"></p>
         <p>{{ generateText }}</p>
     </div>
-    
 </template>
 
 <script setup lang="ts">
 const keyword = ref('');
-const generateText = ref('ウチに何でも聞くっちゃ');
+const generateText = ref('見せてやろう、わしの真の姿を');
 
 const prompt = computed(() => `
-  ${keyword.value}について最大150文字で、語尾に「だっちゃ」をつけて日本語で回答して下さい。。
+  ${keyword.value}について最大150文字で、日本語で回答して下さい。
 `);
 
 const handleClick = async () => {
@@ -34,7 +33,7 @@ const handleClick = async () => {
     })
 
     if (data.value.error) {
-        generateText.value = 'なんかエラったっちゃ。エラー内容は' + data.value.error.message + 'って言われてるっちゃ。';
+        generateText.value = 'エラーのようじゃ。エラー内容は' + data.value.error.message + 'と申しておる。';
         input.disabled = false;
         button.disabled = false;
     } else {
@@ -54,11 +53,11 @@ input {
     width: 40%;
     margin-bottom: 20px;
 }
-.ramu {
+.yoruichi {
     display: flex;
     justify-content: center;
 }
-.ramu > p{
+.yoruichi>p {
     width: 20%;
     margin: 2%;
 }
