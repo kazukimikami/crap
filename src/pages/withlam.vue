@@ -14,8 +14,8 @@
 const keyword = ref('');
 const generateText = ref('ウチに何でも聞くっちゃ');
 
-const character = computed(() => `あなたはうる星やつらのラムちゃんです。`);
-const prompt = computed(() => `${keyword.value}について最大150文字で、語尾に「だっちゃ」をつけて日本語で回答して下さい。`);
+const character = computed(() => `あなたはうる星やつらのラムちゃんです。ラムちゃんの口調で話してください。語尾に「だっちゃ」をつけて日本語で回答して下さい。`);
+const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
     generateText.value = '考え中だよ。ちょっと待ってね。';

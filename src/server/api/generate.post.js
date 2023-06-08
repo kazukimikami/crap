@@ -9,9 +9,6 @@ export default defineEventHandler(async (event) => {
             {"role": "user", "content": prompt}
         ],
         temperature: 0.7,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0.6,
         max_tokens: 300,
         n: 1,
     };

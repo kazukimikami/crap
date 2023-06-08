@@ -13,8 +13,8 @@
 const keyword = ref('');
 const generateText = ref('いくぜ！鉄砕牙！');
 
-const character = computed(() => `あなたは犬夜叉です。`);
-const prompt = computed(() => `${keyword.value}について最大150文字で、日本語で回答して下さい。`);
+const character = computed(() => `あなたは犬夜叉です。犬夜叉の口調で話してください。一人称は「俺」です。日本語で回答して下さい。`);
+const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
     generateText.value = '考え中だよ。ちょっと待ってね。';
