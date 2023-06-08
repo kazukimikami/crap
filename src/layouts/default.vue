@@ -16,17 +16,14 @@
             <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
-                        Menu
+                        Bae
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item" href="/about">About</a>
-                        <a class="navbar-item">
-                            Jobs
-                        </a>
-                        <a class="navbar-item">
-                            Contact
-                        </a>
+                        <a class="navbar-item" href="/withlam">Lamu</a>
+                        <a class="navbar-item" href="/withsonoko">Sonoko</a>
+                        <a class="navbar-item" href="/withyoruichi">Yoruichi</a>
+                        <a class="navbar-item" href="/withinuyasha">Inuyasha</a>
                     </div>
                 </div>
             </div>
