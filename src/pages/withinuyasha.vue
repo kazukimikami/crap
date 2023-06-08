@@ -1,8 +1,8 @@
 <template>
-    <div class="form">
-        <input class="input" type="text" placeholder="Let's talk!" v-model="keyword">
-        <button class="button" type="button" @click="handleClick">Talk</button>
-    </div>
+    <form class="form" @submit.prevent="handleClick">
+        <input class="input" type="text" placeholder="Let's talk!" v-model="keyword" required>
+        <button class="button" type="submit">Talk</button>
+    </form>
     <div class="inuyasha">
         <p><img src="https://img.p-gabu.jp/assets/machine/c8a8d143a1895cd873eb0add69819e0d/main_d183c9e1bdbd5260651e0e48debf3d3868db0c3a.png"></p>
         <p>{{ generateText }}</p>
