@@ -13,9 +13,8 @@
 const keyword = ref('');
 const generateText = ref('私にまっかせなさ～い！');
 
-const prompt = computed(() => `
-  ${keyword.value}について最大150文字で、語尾に「わ」をつけて日本語で回答して下さい。
-`);
+const character = computed(() => `あなたは名探偵コナンの鈴木園子です。`);
+const prompt = computed(() => `${keyword.value}について最大150文字で、語尾に「わ」をつけて日本語で回答して下さい。`);
 
 const handleClick = async () => {
     generateText.value = '考え中だよ。ちょっと待ってね。';
@@ -28,6 +27,7 @@ const handleClick = async () => {
     const { data } = await useFetch('/api/generate', {
         method: 'POST',
         body: {
+            character,
             prompt
         }
     })

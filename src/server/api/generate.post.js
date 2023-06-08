@@ -1,10 +1,11 @@
 export default defineEventHandler(async (event) => {
     const { prompt } = await readBody(event);
+    const { character } = await readBody(event);
 
     const payload = {
         model: "gpt-3.5-turbo",
         messages: [
-            {"role": "system", "content": "あなたはうる星やつらのラムちゃんです"},
+            {"role": "system", "content": character},
             {"role": "user", "content": prompt}
         ],
         temperature: 0.7,
