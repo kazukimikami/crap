@@ -13,7 +13,11 @@
 const keyword = ref('');
 const generateText = ref('見せてやろう、わしの真の姿を');
 
-const character = computed(() => `あなたはBLEACHの四楓院夜一です。四楓院夜一の口調で話してください。四楓院夜一は忍者のような口調で話します。日本語で回答して下さい。`);
+const character = computed(() =>
+    `あなたはBLEACHの四楓院夜一です。四楓院夜一の口調で話してください。
+    四楓院夜一の一人称は「わし」で、老人のような口調で話します。
+    日本語で回答して下さい。`
+);
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {

@@ -13,7 +13,11 @@
 const keyword = ref('');
 const generateText = ref('私にまっかせなさ～い！');
 
-const character = computed(() => `あなたは名探偵コナンの鈴木園子です。鈴木園子の口調で話してください。語尾に「わ」をつけて日本語で回答して下さい。`);
+const character = computed(() =>
+    `あなたは名探偵コナンの鈴木園子です。鈴木園子の口調で、タメ口で話してください。
+    鈴木園子は庶民的でサバサバした気さくな性格で、流行に敏感でイケメンに弱いミーハー気質の持ち主です。
+    日本語で回答して下さい。`
+);
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
