@@ -1,12 +1,14 @@
 <template>
+    <div class="sonoko">
+        <img src="@/assets/img/sonoko.png">
+        <div class="box">
+            {{ generateText }}
+        </div>
+    </div>
     <form class="form" @submit.prevent="handleClick">
         <input class="input" type="text" placeholder="Let's talk!" v-model="keyword" required>
         <button class="button" type="submit">Talk</button>
     </form>
-    <div class="sonoko">
-        <p><img src="https://img.animanch.com/2022/04/1650274668333.jpg"></p>
-        <p>{{ generateText }}</p>
-    </div>
 </template>
 
 <script setup lang="ts">
@@ -49,21 +51,22 @@ const handleClick = async () => {
 </script>
 
 <style scoped>
+.sonoko {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 60%;
+}
+.sonoko > img {
+    width: 35%;
+    margin: 2%;
+}
 .form {
     text-align: center;
     padding: 20px;
 }
 input {
-    width: 40%;
+    width: 45%;
     margin-bottom: 20px;
-}
-.sonoko {
-    display: flex;
-    justify-content: center;
-}
-.sonoko>p {
-    width: 20%;
-    margin: 2%;
 }
 </style>
 

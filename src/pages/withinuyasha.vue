@@ -1,12 +1,14 @@
 <template>
+    <div class="inuyasha">
+        <img src="@/assets/img/inuyasha.png">
+        <div class="box">
+            {{ generateText }}
+        </div>
+    </div>
     <form class="form" @submit.prevent="handleClick">
         <input class="input" type="text" placeholder="Let's talk!" v-model="keyword" required>
         <button class="button" type="submit">Talk</button>
     </form>
-    <div class="inuyasha">
-        <p><img src="https://img.p-gabu.jp/assets/machine/c8a8d143a1895cd873eb0add69819e0d/main_d183c9e1bdbd5260651e0e48debf3d3868db0c3a.png"></p>
-        <p>{{ generateText }}</p>
-    </div>
 </template>
 
 <script setup lang="ts">
@@ -45,21 +47,22 @@ const handleClick = async () => {
 </script>
 
 <style scoped>
+.inuyasha {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 60%;
+}
+.inuyasha > img {
+    width: 57%;
+    margin: 2%;
+}
 .form {
     text-align: center;
     padding: 20px;
 }
 input {
-    width: 40%;
+    width: 45%;
     margin-bottom: 20px;
-}
-.inuyasha {
-    display: flex;
-    justify-content: center;
-}
-.inuyasha>p {
-    width: 20%;
-    margin: 2%;
 }
 </style>
 

@@ -1,13 +1,14 @@
 <template>
+    <div class="lam">
+        <img src="@/assets/img/lam.png">
+        <div class="box">
+            {{ generateText }}
+        </div>
+    </div>
     <form class="form" @submit.prevent="handleClick">
         <input class="input" type="text" placeholder="Let's talk!" v-model="keyword" required>
         <button class="button" type="submit">Talk</button>
     </form>
-    <div class="lam">
-        <p><img src="https://www.onitsukatiger.com/jp/ja-jp/mk/uycollaboration/common/img/chara1.png"></p>
-        <p>{{ generateText }}</p>
-    </div>
-    
 </template>
 
 <script setup lang="ts">
@@ -49,21 +50,22 @@ const handleClick = async () => {
 </script>
 
 <style scoped>
+.lam {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 60%;
+}
+.lam > img {
+    width: 50%;
+    margin: 2%;
+}
 .form {
     text-align: center;
     padding: 20px;
 }
 input {
-    width: 40%;
+    width: 45%;
     margin-bottom: 20px;
-}
-.lam {
-    display: flex;
-    justify-content: center;
-}
-.lam > p{
-    width: 20%;
-    margin: 2%;
 }
 </style>
 
