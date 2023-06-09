@@ -17,7 +17,7 @@ const character = computed(() => `あなたは犬夜叉です。犬夜叉の口�
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
-    generateText.value = '考え中だよ。ちょっと待ってね。';
+    generateText.value = '少し待つんだ。';
     const input = document.getElementsByClassName('input')[0];
     const button = document.getElementsByClassName('button')[0];
     // TODO 絶対いい方法あるから暫定ってことで。

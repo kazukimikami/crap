@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar is-black" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
                 <i>💩</i>Crap
@@ -39,3 +39,9 @@
         </div>
     </footer>
 </template>
+
+<style scoped>
+.navbar {
+    background-color: rgba(243,166,180);
+}
+</style>

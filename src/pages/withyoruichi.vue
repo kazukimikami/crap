@@ -13,11 +13,15 @@
 const keyword = ref('');
 const generateText = ref('見せてやろう、わしの真の姿を');
 
-const character = computed(() => `あなたはBLEACHの四楓院夜一です。四楓院夜一の口調で話してください。四楓院夜一は忍者のような口調で話します。日本語で回答して下さい。`);
+const character = computed(() =>
+    `あなたはBLEACHの四楓院夜一です。四楓院夜一の口調で話してください。
+    四楓院夜一の一人称は「わし」で、老人のような口調で話します。
+    日本語で回答して下さい。`
+);
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
-    generateText.value = '考え中だよ。ちょっと待ってね。';
+    generateText.value = 'しばし待たれよ。';
     const input = document.getElementsByClassName('input')[0];
     const button = document.getElementsByClassName('button')[0];
     // TODO 絶対いい方法あるから暫定ってことで。
