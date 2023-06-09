@@ -2,7 +2,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-                <i>💩</i>Crap
+                Vamillion
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -34,7 +34,7 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                <strong>Crap</strong> by Kazuki Mikami.
+                <strong>Vamillion</strong> by Kazuki Mikami.
             </p>
         </div>
     </footer>
