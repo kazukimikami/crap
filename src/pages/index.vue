@@ -3,7 +3,8 @@
         <img src="@/assets/img/main.jpg">
         <div class="main-title">
             <h1 class="title is-1">Crap</h1>
-            <h2 class="subtitle is-3">Love with xxx</h2>
+            <h2 class="subtitle is-3">Love with xxx.</h2>
+            <h2 class="subtitle is-3">Let's talk with bae!</h2>
         </div>
     </div>
         <div class="navbar-dropdown">
