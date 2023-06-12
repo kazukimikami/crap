@@ -8,7 +8,7 @@
         </div>
     </div>
     <form class="form" @submit.prevent="handleClick">
-        <input class="input" type="text" placeholder="Let's talk!" v-model="keyword" required>
+        <input class="input" type="text" placeholder="Let's talk!" v-model.lazy="keyword" required>
         <button class="button" type="submit">Talk</button>
     </form>
 </template>
