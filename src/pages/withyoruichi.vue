@@ -64,6 +64,9 @@ const handleClick = async () => {
     width: 45%;
     margin: 2%;
 }
+.box {
+    margin-bottom: 10px;
+}
 .form {
     text-align: center;
     padding: 20px;
