@@ -1,25 +1,27 @@
 <template>
     <div class="inuyasha">
         <img src="@/assets/img/inuyasha.png">
-        <div class="box">
-            {{ generateText }}
+        <div v-for="generateText in generateTexts" :key="generateText">
+            <div class="box">
+                {{ generateText }}
+            </div>
         </div>
     </div>
     <form class="form" @submit.prevent="handleClick">
-        <input class="input" type="text" placeholder="Let's talk!" v-model="keyword" required>
+        <input class="input" type="text" placeholder="Let's talk!" v-model.lazy="keyword" required>
         <button class="button" type="submit">Talk</button>
     </form>
 </template>
 
 <script setup lang="ts">
-const keyword = ref('');
-const generateText = ref('いくぜ！鉄砕牙！');
+const keyword = ref<string>('');
+const generateTexts = ref<string[]>('いくぜ！鉄砕牙！');
 
 const character = computed(() => `あなたは犬夜叉です。犬夜叉の口調で話してください。一人称は「俺」です。日本語で回答して下さい。`);
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
-    generateText.value = '少し待つんだ。';
+    generateTexts.value = '少し待つんだ。';
     const input = document.getElementsByClassName('input')[0];
     const button = document.getElementsByClassName('button')[0];
     // TODO 絶対いい方法あるから暫定ってことで。
@@ -35,11 +37,13 @@ const handleClick = async () => {
     })
 
     if (data.value.error) {
-        generateText.value = 'エラーだぜ！エラー内容は' + data.value.error.message + 'らしいぞ。';
+        generateTexts.value.pop();
+        generateTexts.value.push('エラーだぜ！エラー内容は' + data.value.error.message + 'らしいぞ。');
         input.disabled = false;
         button.disabled = false;
     } else {
-        generateText.value = data.value.choices[0].message.content;
+        generateTexts.value.pop();
+        generateTexts.value.push(data.value.choices[0].message.content);
         input.disabled = false;
         button.disabled = false;
     }
