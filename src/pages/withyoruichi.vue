@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 const keyword = ref<string>('');
-const generateTexts = ref<string[]>('見せてやろう、わしの真の姿を');
+const generateTexts = ref<string[]>(['見せてやろう、わしの真の姿を']);
 
 const character = computed(() =>
     `あなたはBLEACHの四楓院夜一です。四楓院夜一の口調で話してください。
@@ -25,7 +25,7 @@ const character = computed(() =>
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
-    generateTexts.value = 'しばし待たれよ。';
+    generateTexts.value.push('しばし待たれよ。');
     const input = document.getElementsByClassName('input')[0];
     const button = document.getElementsByClassName('button')[0];
     // TODO 絶対いい方法あるから暫定ってことで。
