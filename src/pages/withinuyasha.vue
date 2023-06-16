@@ -15,13 +15,13 @@
 
 <script setup lang="ts">
 const keyword = ref<string>('');
-const generateTexts = ref<string[]>('いくぜ！鉄砕牙！');
+const generateTexts = ref<string[]>(['いくぜ！鉄砕牙！']);
 
 const character = computed(() => `あなたは犬夜叉です。犬夜叉の口調で話してください。一人称は「俺」です。日本語で回答して下さい。`);
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
-    generateTexts.value = '少し待つんだ。';
+    generateTexts.value.push('少し待つんだ。');
     const input = document.getElementsByClassName('input')[0];
     const button = document.getElementsByClassName('button')[0];
     // TODO 絶対いい方法あるから暫定ってことで。

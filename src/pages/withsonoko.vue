@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 const keyword = ref<string>('');
-const generateTexts = ref<string[]>('私にまっかせなさ～い！');
+const generateTexts = ref<string[]>(['私にまっかせなさ～い！']);
 
 const character = computed(() =>
     `あなたは名探偵コナンの鈴木園子です。鈴木園子の口調で、タメ口で話してください。
@@ -25,7 +25,7 @@ const character = computed(() =>
 const prompt = computed(() => `${keyword.value}`);
 
 const handleClick = async () => {
-    generateTexts.value = 'ちょっと待ってね。';
+    generateTexts.value.push('ちょっと待ってね。');
     const input = document.getElementsByClassName('input')[0];
     const button = document.getElementsByClassName('button')[0];
     // TODO 絶対いい方法あるから暫定ってことで。
